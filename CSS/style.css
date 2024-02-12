@@ -5,404 +5,260 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto-newt, sans-serif;
-  }
-  @font-face {
-    font-family: 'Protest Strike';
-    src: url('./fonts/Protest_Strike/ProtestStrike-Regular.ttf');
-  }
-  @font-face {
+}
+@font-face {
+    font-family: "Protest Strike";
+    src: url("./fonts/Protest_Strike/ProtestStrike-Regular.ttf");
+}
+@font-face {
     font-family: Roboto-newt;
-    src: url('./fonts/Roboto/Roboto-Light.ttf'),
-         url('./fonts/Roboto/Roboto-Medium.ttf'),
-         url('./fonts/Roboto/Roboto-Regular.ttf'),
-         url('./fonts/Roboto/Roboto-Thin.ttf');
-  }
-  @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('./fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf');
-  }
-  /* Base styles */
-  body {
+    src: url("./fonts/Roboto/Roboto-Light.ttf"),
+        url("./fonts/Roboto/Roboto-Medium.ttf"),
+        url("./fonts/Roboto/Roboto-Regular.ttf"),
+        url("./fonts/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf");
+}
+/* Base styles */
+body {
     width: 100vw;
+    background: #212;
     overflow-x: hidden;
-    background: #212121;
-  }
-  ul {
-    list-style: none;
-    text-transform: uppercase;
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-
- /* header styling and layout dressing */
-  #header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    width: 100vw;
-  }
-  .col {
+}
+/* styling below belongs to the header section */
+#header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    margin: 10px 0;
+    border: 2px solid red;
+    padding: 10px;
+}
+.header-col {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .logo img {
-    width: 200px;
-    border: 2px solid #000;
+}
+.header-col div > img {
+    width: 120px;
+    border: 2px solid #333;
     border-radius: 5px;
-  }
-
-  #navbar ul li{
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 20px;
-  }
-  #navbar ul li a{
-    height: 60px;
-    padding: 15px;
-    border-radius: 5px;
-    transition: background 0.5s, outline 0.5s, border 0.5s ease-out;
-  }
-  .col-2 {
-    background-image: url('/img/bg/carousel-1.jpg');
+}
+/* transition display effect for the drop down menu */
+.dd-content {
+    align-self: center;
+    text-align: center;
+    height: 0;
+    transition:
+        visibility 0.1s,
+        height 0.5s;
+    visibility: hidden;
+}
+.dd-content ul li {
+    list-style: none;
+    font-family: "Poppins", Sans-Serif;
+    font-size: 1.1rem;
+    height: 30px;
+}
+.show-dd-content {
+    height: 130px;
+    visibility: visible;
+}
+/* transition display effect ends here */
+li a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    width: 98vw;
+    margin-top: 2px;
+    padding: 3px;
+    transition:
+        background 0 5s,
+        border-bottom 0.5s;
+    cursor: pointer;
+}
+li a:hover {
+    background: #306f74;
+    border-bottom: 2px solid #424;
+}
+/* styling below belongs to the second half of the header  */
+.header-col-2 {
+    align-self: center;
+    width: 98vw;
+    height: 400px;
+    background: url("/img/bg/carousel-1.jpg");
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
     background-repeat: no-repeat;
-    margin: 0;
-  }
-  .info {
-    background: rgba(0, 0, 0, 0.7);
-    height: 100vh;
-    width: 100vw;
+}
+.info {
+    width: inherit;
+    height: inherit;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
     position: relative;
-  }
-  .info h1{
-    font-size: 80px;
-    font-weight: 900;
+}
+.info h1 {
+    font-family: "Protest Strike", Sans-Serif;
+    font-size: 35px;
     color: #fff;
-    font-family: 'Protest Strike', sans-serif;
+    width: 280px;
+    position: relative;
+    top: 30%;
+    left: 10%;
+}
+.info p {
+    color: #fff;
+    position: relative;
+    top: 35%;
+    left: 10%;
+    font-size: 17px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+/* styling for main tag starts here */
+.content {
+    width: 95vw;
+    margin: 0 auto;
+}
+.con > div {
+    display: flex;
+}
+.con-1,
+.con-2,
+.con-3 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    overflow-x: hidden;
+    align-items: center;
+    color: #fff;
+}
+.con-2 {
+    flex-direction: column-reverse;
+}
+.compliment {
+    border: 2px solid yellow;
+    margin-top: 10px;
+    padding: 5px;
     text-align: center;
-    width: 600px;
-    position: relative;
-    top: 20%;
-    left: 10%;
-  }
-
-  .info p {
-    position: relative;
-    width: 500px;
-    vertical-align: middle;
+}
+/* .sec-1 {
+    border: 2px solid red;
+  } */
+.img-row-1 .service-img {
+    width: 150px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 0 3px;
+}
+/* code here belongs to the service section  */
+#services {
     display: flex;
-    place-items: center;
-    gap: 7px;
-    font-size: 20px;
-    top: 20%;
-    left: 10%;
-    padding: 10px;
-    font-weight: 550;
-  }
-  .icon {
-    height: 60px;
-    width: 50px;
-  }
-  .info p span a {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+#services p {
+    text-align: center;
     color: #fff;
-    font-size:20px ;
-    font-weight: 550;
-  }
-  #service-days {
-    width: 80%;
-    border: #EB1616 2px solid;
+}
+#services > p > strong {
+    background: #c0d6df;
+    font-family: "Protest Strike", Sans-Serif;
+    padding: 10px;
+    color: #333;
+}
+.service-con-1,
+.service-con-2 {
+    width: 90vw;
+    padding: 10px;
+    margin: 0 auto;
+    color: #fff;
     display: flex;
-  }
-  #service-days img {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.service-row {
+    transition: transform 0.5s;
+}
+.service-row strong {
+    font-family: "Protest Strike", Sans-Serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateY(-10px);
+    margin-top: 5px;
+}
+.service-row img {
+    transform: translateX(-10px);
+    border: 1px solid #eb1616;
+    padding: 5px;
+    height: 45px;
+    background: #000;
+    border-radius: 3px;
+}
+.service-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: 230px;
+    padding: 7px;
+    border: 2px solid #eb1616;
+    border-radius: 5px;
+    margin: 15px 0;
+    gap: 5px;
+    background: #191c24;
+}
+/* service days section styling */
+#service-days {
+    margin-top: 10px;
+    width: 95%;
+    border: 2px solid red;
+}
+#service-days .img-equipment {
+    width: 100%;
+    height: 100%;
+}
+.img-equipment img {
     max-width: 100%;
     height: auto;
-  }
-  .img-equipment {
-    width: 50%;
-    height: 100%;
-  }
-  .service-time {
-    width: 50%;
+}
+.service-time {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-  .service-time > strong {
-    font-size: 20px;
-    font-family: 'Protest Strike', sans-serif;
-    color: #fff;
-  }
-  .service-time > p {
-    width: 80%;
-    padding: 10px;
-    color: antiquewhite;
-    font-weight: 400;
-  }
-  /* creating transitions for the links  */
-  nav ul li a:hover {
-    color: azure;
-    background: #c0d6df;
-    border: #001524 1px solid;
-    outline: #c0d6df 1px solid;
-  }
-  .menu-icon:hover {
-    cursor: pointer;
-    padding: 3px;
-    border: 1px solid #fff;
-  }
-  .dd-content, .menu-bar {
-    display: none;
-  }
-  
-  /* main content styling below */
- .content {
-  width: 100vw;
- }
- #show-off {
-  width: 100%;
-  text-align: center;
-  background: #212121;
- }
- .service-img {
-  border: 2px solid #001524;
- }
- .img-row-1, .service-img {
-  width: 200px;
-  display: inline-block;
-  margin: 0 5px;
-  overflow-x: hidden;
- }
- .compliment {
-  width: 400px;
-  padding: 40px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-  color: #fff;
- }
- .img-con-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 10px;
- }
- .con-1, .con-2, .con-3 {
-  width: 800px;
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  overflow-x: hidden;
- }
- .con > div {
-  display: flex;
- }
- 
- #services {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  padding: 10px;
-  background: #212121;
- }
- .section-name {
-  color:cornsilk;
-  font-size: 20px;
-  text-align: center;
- }
- #services > p > strong{
-  color: #c0d6df;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Protest Strike', sans-serif;
-  width: 150px;
-  height: 40px;
-  padding: 10px;
-  background: #264653;
- }
- .service-con-1, .service-con-2 {
-  margin: 10px 0;
-  width: 1200px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
- }
- .service-row {
-  background: #191C24;
-  width: 300px;
-  height: 290px;
-  border: 2px solid #EB1616;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-  margin: 0 5px;
-  transition: transform 0.5s;
- }
- .service-row img {
-  transform: translateX(-10px);
-  background: #000;
-  height: 45px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1.5px solid #EB1616;
- }
- .service-row strong {
-  font-family: 'Protest Strike', sans-serif;
-  transform: translateY(30px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: antiquewhite;
- }
- .service-row > p {
-  width: 250px;
-  height: 230px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  color: #c0d6df;
- }
- /* Media Queries Section */
- @media (max-width: 900px) {
-  #navbar ul li a{
-    visibility: hidden;
-  }
-  .menu-bar {
-    display: flex;
-  }
-  .dd-content {
-    height: 0;
-    width: 100vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    visibility: hidden;
-    transition: height 0.5s, visibility 0.3s;
-  }
-  .dd-content ul {
-    width: 100%;
-  }
-  .dd-content ul li {
-    justify-content: center;
-    text-align: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    transition: background 0.5s;
-  }
-  .dd-content ul li:hover {
-  color: azure;
-  background: #c0d6df;
-  border: #001524 1px solid;
-  outline: #c0d6df 1px solid;
-  }
-  .show-dd-content {
-    height: 300px;
-    visibility: visible;
-  }
-  .compliment {
-    width: 300px;
-    font-size: 15px;
-  }
-  .con-1, .con-2, .con-3 { 
-    width: 700px;
-    /* display: block; */
-  }
-  .img-row-1, .service-img {
-    width: 200px;
-    display: inline-block;
-   }
-   .service-con-1, .service-con-2{
-    width: 100%;
-   }
-   .service-row {
-    height: 200px;
-    width: 270px;
-    font-size: 15px;
-   }
-   .service-row > p {
+    margin-top: 10px;
     padding: 5px;
-   }
-   .service-row strong {
-    transform: translateY(5px);
-   }
-   #service-days  {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-   }
-   #service-days .img-equipment {
-    width: 100%;
-   }
-   .service-time {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-   }
+}
+.service-time strong {
+    font-family: "Protest Strike", Sans-Serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.service-time p {
+    padding: 5px;
+    margin-top: 10px;
+}
+@media (min-width: 800px) {
+    #navlist li > a {
+        display: inline-block;
+        list-style: none;
+        width: auto;
+        height: 30px;
+        color: #fff;
+    }
 }
 
-@media (max-width: 748px) {
-  #show-off {
-    width: 700px;
-  }
-  .con-1, .con-3 {
-    flex-direction: column;
-  }
-  .con-2 {
-    flex-direction: column-reverse;
-  }
-  .compliment {
-    width: 400px;
-    font-size: 18px;
-  }
-  .service-con-1, .service-con-2{
-    flex-direction: column;
-    height: auto;
-    margin-top: 20pc;
-   }
-   .service-row {
-    margin-top: 15px;
-   }
-   .info h1 {
-    width: 400px;
-    top: 20%;
-    font-size: 40px;
-   }
-   .info p {
-    width: 400px;
-    top: 30%;
-   }
-   #service-days {
-    width: 60%;
-   }
-   body {
-    overflow-x: hidden;
-   } width: 100vw;
-   background-repeat: no-repeat;
-   margin: 0;
-  .col-2 {
-    height: 300px;
-    width: 100vw;
-    background-repeat: no-repeat;
-  }
-
+#navbar {
+    display: none;
 }
-
-
-
-
