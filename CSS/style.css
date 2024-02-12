@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto-newt, sans-serif;
+    list-style: none;
 }
 @font-face {
     font-family: "Protest Strike";
@@ -32,7 +33,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
-    border: 2px solid red;
     padding: 10px;
 }
 .header-col {
@@ -118,6 +118,10 @@ li a:hover {
     width: 300px;
     margin-bottom: 10px;
 }
+.info p > span > a {
+    color: #fff;
+    text-decoration: none;
+}
 /* styling for main tag starts here */
 .content {
     width: 95vw;
@@ -140,14 +144,12 @@ li a:hover {
     flex-direction: column-reverse;
 }
 .compliment {
-    border: 2px solid yellow;
     margin-top: 10px;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
+    width: 300px;
 }
-/* .sec-1 {
-    border: 2px solid red;
-  } */
+
 .img-row-1 .service-img {
     width: 150px;
     border: 2px solid #333;
@@ -161,6 +163,8 @@ li a:hover {
     align-items: center;
     justify-content: center;
     padding: 5px;
+    width: 95%;
+    margin: 0 auto;
 }
 #services p {
     text-align: center;
@@ -249,16 +253,90 @@ li a:hover {
     padding: 5px;
     margin-top: 10px;
 }
-@media (min-width: 800px) {
-    #navlist li > a {
-        display: inline-block;
-        list-style: none;
-        width: auto;
-        height: 30px;
-        color: #fff;
-    }
+/* this section belongs to the contact us div */
+#contact-us {
+    width: 95%;
+    border: 2px solid white;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#div-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ .contacts {
+    text-align: center;
+    color: #fff;
+ }
+ .contacts strong {
+    background: #c0d6df;
+    font-family: "Protest Strike", Sans-Serif;
+    padding: 10px;
+    color: #333;
+    transform: translateX(-100px);
 }
 
+#div-socails ul .links {
+    list-style: none;
+}
+.links a{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+}
 #navbar {
     display: none;
 }
+footer {
+    width: 95%;
+    margin: 0 auto;
+}
+@media (min-width: 600px) {
+    .info h1 {
+        font-size: 40px;
+        width: 320px;
+    }
+    .info p span > .icon {
+        font-size: 25px;
+        transform: translate(-5px -50px);
+    }
+    .info p {
+        font-size: 20px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .info p:nth-of-type(2) {
+        width: 260px;
+    }
+   .con-1, .con-2, .con-3 {
+    flex-direction: row;
+    justify-content: center;
+   }
+   #service-days {
+    display: flex;
+    max-width: 800px;
+   }
+}
+
+@media (min-width: 800px) {
+    .img-row-1 .service-img {
+        width: 200px;
+       }
+    .service-con-1, .service-con-2 {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+}
+
