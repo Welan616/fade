@@ -344,9 +344,8 @@ footer {
 }
 .email {
     flex-direction: row;
-    width: auto;
     justify-content: space-between;
-    width: 130px;
+    width: 230px;
 }
 .media-link a{
  flex-direction: row;
