@@ -18,3 +18,20 @@ serviceRows.forEach(element => {
     element.style.transform = "scale(1)";
   });
 });
+
+
+function openEmailApp() {
+  const mailtoLink = `mailto:youremail@domain.com?subject=My Subject&body=My Message`;
+  const deviceAgent = navigator.userAgent || navigator.vendor;
+
+  // Android devices
+  if (/android/i.test(deviceAgent)) {
+    window.location.href = mailtoLink;
+  }
+
+  // iOS devices
+  if (/iphone|ipad/i.test(deviceAgent)) {
+    const locationHref = encodeURI(mailtoLink);
+    window.location.href = `intent://${locationHref}#Intent;scheme=mailto;package=com.apple.mobilesafari;end`;
+  }
+}

@@ -67,7 +67,7 @@ body {
     font-size: 1.1rem;
 }
 .show-dd-content {
-    height: auto;
+    height: 210px;
     visibility: visible;
 }
 /* transition display effect ends here */
@@ -269,26 +269,25 @@ li a:hover {
     border: 2px solid white;
     margin: 10px auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
     padding: 10px;
 }
 #div-socials {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    margin: 10px 0;
 }
- .contacts {
-    text-align: center;
+ .footer-header {
     color: #fff;
  }
- .contacts strong {
+ .footer-header strong {
     background: #c0d6df;
     font-family: "Protest Strike", Sans-Serif;
     padding: 10px;
     color: #333;
-    transform: translateX(-100px);
 }
 
 #div-socails ul .links {
@@ -309,6 +308,14 @@ li a:hover {
 footer {
     width: 95%;
     margin: 0 auto;
+}
+.quick-links {
+    width: 30%;
+    margin: 10px 0;
+}
+.quick-links ul li a {
+    width: 150px;
+    align-items: start;
 }
 @media (min-width: 600px) {
     .info h1 {
@@ -374,9 +381,9 @@ footer {
 }
 
 
-media (min-width: 1000px){
+@media (min-width: 1000px){
     .header-col-1 {
-        width: 800px;
+        width: 900px;
         margin: 0 auto;
     }
 }
