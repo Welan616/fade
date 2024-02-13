@@ -81,16 +81,17 @@ li a {
     align-items: center;
     width: 98vw;
     height: 50px;
-    margin-top: 2px;
+    margin: 5px 3px;
     padding: 5px;
     transition:
-        background 0 5s,
-        border-bottom 0.5s;
+        background 0 5s;
     cursor: pointer;
     border-radius: 3px;
+    background: #306f74;
+    border: 2px solid #000;
 }
 li a:hover {
-    background: #306f74;
+    background: #2196f3;
 }
 /* styling below belongs to the second half of the header  */
 .header-col-2 {
@@ -279,6 +280,7 @@ li a:hover {
     justify-content: flex-start;
     flex-direction: column;
     margin: 10px 0;
+    padding: 10px;
 }
  .footer-header {
     color: #fff;
@@ -286,8 +288,12 @@ li a:hover {
  .footer-header strong {
     background: #c0d6df;
     font-family: "Protest Strike", Sans-Serif;
-    padding: 10px;
+    padding: 7px;
     color: #333;
+    border: #000 2px solid;
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
 }
 
 #div-socails ul .links {
@@ -310,12 +316,42 @@ footer {
     margin: 0 auto;
 }
 .quick-links {
-    width: 30%;
+    width: 250px;
     margin: 10px 0;
+    padding: 10px;
 }
 .quick-links ul li a {
     width: 150px;
     align-items: start;
+}
+/* code below belongs to the stay-in-touch part of the html footer */
+#stay-in-touch {
+ margin: 10px 0;
+ padding: 10px;
+}
+#location {
+    width: 290px;
+    height: 60px;
+    font-size: 1rem;
+    color: #fff;
+    margin: 10px 0;
+    padding: 5px;
+}
+.call a{
+    width: 220px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.email {
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    width: 130px;
+}
+.media-link a{
+ flex-direction: row;
+ justify-content: space-between;
+ width: 130px;
 }
 @media (min-width: 600px) {
     .info h1 {
@@ -343,6 +379,15 @@ footer {
    #service-days {
     display: flex;
     max-width: 800px;
+   }
+   #contact-us {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   }
+   #location {
+    width: 300px;
+    height: 50px;
    }
 }
 
