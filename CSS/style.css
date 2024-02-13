@@ -3,9 +3,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Roboto-newt, sans-serif;
     list-style: none;
+}
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+*, * ::before, * ::after {
+    box-sizing: inherit;
 }
 @font-face {
     font-family: "Protest Strike";
@@ -23,11 +30,10 @@
     src: url("./fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf");
 }
 /* Base styles */
-body {
-    width: 100vw;
+body { 
     background: #212;
-    overflow-x: hidden;
 }
+
 /* styling below belongs to the header section */
 #header {
     display: flex;
@@ -126,6 +132,7 @@ li a:hover {
 .content {
     width: 95vw;
     margin: 0 auto;
+    overflow: hidden;
 }
 .con > div {
     display: flex;
