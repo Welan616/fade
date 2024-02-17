@@ -40,7 +40,7 @@ function openEmailApp() {
 let footer = document.getElementById('contact-session');
 let btnLink = document.querySelector('.in-page-link');
 let btnLink2 = document.getElementById('in-page-link')
-console.log(btnLink);
+console.log(btnLink, btnLink2);
 
 btnLink.addEventListener('click', () => {
     console.log('free')
