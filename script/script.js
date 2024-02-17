@@ -1,3 +1,4 @@
+
 const menuBtn = document.querySelector("#menu-icon");
 const ddContent = document.querySelector(".dd-content");
 
@@ -35,3 +36,24 @@ function openEmailApp() {
     window.location.href = `intent://${locationHref}#Intent;scheme=mailto;package=com.apple.mobilesafari;end`;
   }
 }
+
+let footer = document.getElementById('contact-session');
+let btnLink = document.querySelector('.in-page-link');
+let btnLink2 = document.getElementById('in-page-link')
+console.log(btnLink);
+
+btnLink.addEventListener('click', () => {
+    console.log('free')
+    footer.classList.add('shake');
+    setTimeout(() => {
+      footer.classList.remove('shake');
+    }, 2000);
+  });
+  
+  btnLink2.addEventListener('click', () => {
+    console.log('free')
+    footer.classList.add('shake');
+    setTimeout(() => {
+      footer.classList.remove('shake');
+    }, 2000);
+  });

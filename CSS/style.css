@@ -10,6 +10,7 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, * ::before, * ::after {
     box-sizing: inherit;
@@ -32,7 +33,9 @@ html {
 /* Base styles */
 body { 
     background: #212;
+    /* scroll-behavior: smooth; */
 }
+
 
 /* styling below belongs to the header section */
 #header {
@@ -315,6 +318,9 @@ footer {
     width: 95%;
     margin: 0 auto;
 }
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
 .quick-links {
     width: 250px;
     margin: 10px 0;
@@ -430,4 +436,14 @@ footer {
         width: 900px;
         margin: 0 auto;
     }
+}
+
+/* css animation section */
+
+@keyframes shake {
+    0%{transform: translateX(1px);}
+    25%{transform: translateX(-1px);}
+    50%{transform: translateX(1px);}
+    75%{transform: translateX(-1px);}
+    100%{transform: translateX(1px);}
 }
