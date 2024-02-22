@@ -22,7 +22,7 @@ serviceRows.forEach(element => {
 
 
 function openEmailApp() {
-  const mailtoLink = `mailto:bleboylawson@gmail.com?subject=My Subject&body=My Message`;
+  const mailtoLink = `mailto:anosikejustice232@gmail.com?subject= Haircut &body=My Message`;
   const deviceAgent = navigator.userAgent || navigator.vendor;
 
   // Android devices
